@@ -1,37 +1,42 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hind', sans-serif;
+}
+
+.rem2 {
+  font-size: 2rem;
+}
+
+.fw600 {
+  font-weight: 600;
 }
 
 .nav-bar {
   display: flex;
   background: black;
-  color: #fff;
-}
-
-.logo-text {
-  font-size: 15px;
-}
-
-.links {
-  display: flex;
   align-items: center;
+  color: #fff;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div.logo {
+  background: url('./pokeball.png');
+  background-size: contain;
+  width: 100px;
+  height: 100px;
 }
 
 .ul-links {
   list-style: none;
   display: flex;
-  font-weight: bold;
-}
-
-li {
-  margin-right: 10px;
 }
 
 a {
   text-decoration: none;
   color: #fff;
-}
-
-.ul-links li a:hover {
-  color: #4472e7;
 }
