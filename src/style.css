@@ -41,7 +41,31 @@ a {
   border: 2px solid black;
 }
 
-img {
+.img {
   width: 220px;
+  align-items: center;
+}
+
+.name {
+  font-size: 30px;
+}
+
+.size {
+  font-size: 20px;
+}
+
+.popcontainer {
+  text-align: center;
+}
+
+.popcontainer1 {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+}
+
+.lowerdiv {
+  display: flex;
+  gap: 6rem;
   justify-content: center;
 }
