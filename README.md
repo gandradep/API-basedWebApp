@@ -68,6 +68,7 @@ Give a ⭐️ if you like this project.
 ## Acknowledgments
 
 - Microverse
+- [Pokeball image](https://commons.wikimedia.org/wiki/Category:Pok%C3%A9_Balls)
 
 ## 📝 License
 
