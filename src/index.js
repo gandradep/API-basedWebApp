@@ -1,4 +1,4 @@
-import './style.css';
+import './popup.css';
 import { getPokemon } from './modules/popupwindow.js';
 import { display } from './modules/displaypopup.js';
 

@@ -35,37 +35,3 @@ a {
 .ul-links li a:hover {
   color: #4472e7;
 }
-
-.popup-window {
-  width: 50%;
-  border: 2px solid black;
-}
-
-.img {
-  width: 220px;
-  align-items: center;
-}
-
-.name {
-  font-size: 30px;
-}
-
-.size {
-  font-size: 20px;
-}
-
-.popcontainer {
-  text-align: center;
-}
-
-.popcontainer1 {
-  display: flex;
-  gap: 6rem;
-  justify-content: center;
-}
-
-.lowerdiv {
-  display: flex;
-  gap: 6rem;
-  justify-content: center;
-}

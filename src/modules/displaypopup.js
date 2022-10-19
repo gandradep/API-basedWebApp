@@ -2,6 +2,7 @@ export const display =(data) => {
   const popup = document.querySelector('.popup-window');
   const img = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png';
   popup.innerText = '';
+  popup.innerHTML += `<span id="close-popup">X</span>`
   const div3 = document.createElement('div');
   div3.className = "popcontainer";
   div3.innerHTML += `<img class="img" src="${img}">`
