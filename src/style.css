@@ -35,3 +35,13 @@ a {
 .ul-links li a:hover {
   color: #4472e7;
 }
+
+.popup-window {
+  width: 50%;
+  border: 2px solid black;
+}
+
+img {
+  width: 220px;
+  justify-content: center;
+}
