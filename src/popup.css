@@ -1,6 +1,20 @@
-.popup-window {
-  width: 50%;
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+.nav-bar,
+.footerNote,
+.main {
+  display: none;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+}
+
+.divCont {
+  margin: auto;
+  width: 40%;
   border: 2px solid black;
+  padding: 10px;
 }
 
 .img {
@@ -22,13 +36,13 @@
 
 .popcontainer1 {
   display: flex;
-  gap: 6rem;
+  gap: 8rem;
   justify-content: center;
 }
 
 .lowerdiv {
   display: flex;
-  gap: 6rem;
+  gap: 8rem;
   justify-content: center;
 }
 
