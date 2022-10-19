@@ -1,6 +1,6 @@
 const popup = document.querySelector('.popup-window');
 
-const display = (data) => {
+const displayDetails = (data) => {
   const divCont = document.createElement('div');
   divCont.className = 'divCont';
   const img = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png';
@@ -48,4 +48,4 @@ const display = (data) => {
   popup.appendChild(divCont);
 };
 
-export default display;
+export default displayDetails;

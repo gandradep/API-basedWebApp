@@ -1,5 +1,5 @@
 import './popup.css';
-import getPokemon from './modules/popupwindow.js';
-import display from './modules/displaypopup.js';
+import getPokemonDetails from './modules/popupwindow.js';
+import displayDetails from './modules/displaypopup.js';
 
-getPokemon().then((json) => display(json));
+getPokemonDetails().then((json) => displayDetails(json));
