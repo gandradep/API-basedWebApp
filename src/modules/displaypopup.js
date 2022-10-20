@@ -1,6 +1,7 @@
+import displayComments from './displayComments.js';
 const popup = document.querySelector('.popup-window');
 
-const displayDetails = (data) => {
+const displayDetails = async (data) => {
   const divCont = document.createElement('div');
   divCont.className = 'divCont';
   const img = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png';
@@ -45,7 +46,10 @@ const displayDetails = (data) => {
     lowerdiv.appendChild(div1);
   });
   divCont.appendChild(lowerdiv);
-  popup.appendChild(divCont);
+  const divComment = await displayComments();
+  console.log(divComment);
+  popup.append(divCont, divComment);
+
 };
 
 export default displayDetails;
