@@ -1,13 +1,12 @@
-import displayComments from './displayComments.js';
+import getComments from './getComments.js';
 const popup = document.querySelector('.popup-window');
 
 const displayDetails = async (data) => {
+  const commentArr = await getComments();
   const divCont = document.createElement('div');
   divCont.className = 'divCont';
   const img = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png';
   popup.innerText = '';
-  // const item_id = data.id;
-  // console.log(item_id);
   divCont.innerHTML += '<span id="close-popup">X</span>';
   const div3 = document.createElement('div');
   div3.className = 'popcontainer';
@@ -45,10 +44,16 @@ const displayDetails = async (data) => {
     div1.appendChild(div);
     lowerdiv.appendChild(div1);
   });
-  divCont.appendChild(lowerdiv);
-  const divComment = await displayComments();
-  console.log(divComment);
-  popup.append(divCont, divComment);
+/* creating comments */
+  const ulComments = document.createElement('ul');
+  commentArr.forEach((item) => {
+    console.log(item);
+  ulComments.className = 'divComments';
+  ulComments.innerHTML += `<li>${item.creation_date} ${item.username}: ${item.comment}</li>`;;
+  });
+
+  divCont.append(lowerdiv, ulComments);
+  popup.append(divCont);
 
 };
 
