@@ -3,7 +3,7 @@ export const display = (data) => {
   const mainContainer = document.getElementById('main');
   let count = 1;
   let indexImg;
-  const numLikes = 2;
+
   const imgUrl = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/';
   mainContainer.innerText = '';
   data.forEach((item) => {
@@ -14,6 +14,7 @@ export const display = (data) => {
     const name = document.createElement('span');
     const likes = document.createElement('button');
     const comment = document.createElement('button');
+    const numLikes = item.likes;
     div.classList.add('dFlex', 'homeDivPokemon');
     divNameLikes.classList.add('dFlex', 'divNameLikes');
     /* url image link */

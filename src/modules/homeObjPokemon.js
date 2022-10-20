@@ -1,25 +1,27 @@
 /* eslint-disable import/prefer-default-export */
-const getPokemon = () => fetch('https://pokeapi.co/api/v2/pokemon')
-  .then((response) => response.json())
-  .then(async (json) => {
-    const resPromise = await json;
-    return resPromise.results;
-  });
+import { getPokemon, getLikes } from './homeFetching.js';
 
 export const buildObj = async () => {
   const imgUrl = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/';
   let indexImg;
-  const result = await getPokemon();
+  const resultPokemon = await getPokemon();
+  const resultLikes = await getLikes();
+
   const newObjArr = [];
   let count = 1;
 
-  result.forEach((item) => {
+  resultPokemon.forEach((item) => {
     indexImg = count.toString().padStart(3, '0');
     const responseObj = {
       id: count,
       imgSrc: `${imgUrl}${indexImg}.png`,
+      likes: 0,
       ...item,
     };
+    const value = resultLikes.find((obj) => Number(obj.item_id) === responseObj.id);
+    if (value) {
+      responseObj.likes = value.likes;
+    }
     newObjArr.push(responseObj);
     count += 1;
   });
