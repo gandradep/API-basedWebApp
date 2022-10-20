@@ -9,5 +9,3 @@ import { display } from './modules/homeDisplay.js';
 
 buildObj().then((json) => display(json));
 getPokemonDetails().then((json) => displayDetails(json));
-
-// displayComments();
