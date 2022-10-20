@@ -18,15 +18,12 @@ export const buildObj = async () => {
       likes: 0,
       ...item,
     };
-    const value = resultLikes.find(obj => Number(obj.item_id) === responseObj.id) ;
+    const value = resultLikes.find((obj) => Number(obj.item_id) === responseObj.id);
     if (value) {
       responseObj.likes = value.likes;
     }
     newObjArr.push(responseObj);
-
     count += 1;
   });
-
-console.log(newObjArr);
   return newObjArr;
-};
+  };
