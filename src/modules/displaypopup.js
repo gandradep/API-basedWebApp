@@ -1,4 +1,5 @@
 import getComments from './getComments.js';
+
 const popup = document.querySelector('.popup-window');
 
 const displayDetails = async (data) => {
@@ -44,17 +45,27 @@ const displayDetails = async (data) => {
     div1.appendChild(div);
     lowerdiv.appendChild(div1);
   });
-/* creating comments */
-  const ulComments = document.createElement('ul');
+  /* creating comments */
+  const commentsDiv = document.createElement('div');
+  commentsDiv.className = 'commentsDiv';
+  commentsDiv.innerHTML += '<span class="comments">Comments</span>';
+  const ulComments = document.createElement('table');
+  ulComments.innerHTML += '<tr><th>Creation Date</th><th>UserName</th><th>Comment</th></tr>';
   commentArr.forEach((item) => {
-    console.log(item);
-  ulComments.className = 'divComments';
-  ulComments.innerHTML += `<li>${item.creation_date} ${item.username}: ${item.comment}</li>`;;
+    // console.log(item);
+    ulComments.className = 'divComments';
+    ulComments.innerHTML += `
+   <tr>
+        <td>${item.creation_date}</td>
+        <td>${item.username}</td>
+        <td>${item.comment}</td>
+      </tr>
+  `;
   });
 
-  divCont.append(lowerdiv, ulComments);
+  commentsDiv.appendChild(ulComments);
+  divCont.append(lowerdiv, commentsDiv);
   popup.append(divCont);
-
 };
 
 export default displayDetails;
