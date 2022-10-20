@@ -26,4 +26,4 @@ export const buildObj = async () => {
     count += 1;
   });
   return newObjArr;
-  };
+};
