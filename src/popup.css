@@ -70,3 +70,38 @@ body {
 th {
   background-color: #eafaf1;
 }
+
+.formDiv {
+  text-align: center;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.com-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.com-form input,
+.com-form button {
+  width: 250px;
+  border: 2px solid #000;
+  height: 35px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.com-form button {
+  box-shadow: 2px 2px 4px 0;
+  cursor: pointer;
+}
+
+.com-form textarea {
+  width: 250px;
+  height: 155px;
+  border: 2px solid #000;
+  outline: none;
+  padding: 5px;
+}

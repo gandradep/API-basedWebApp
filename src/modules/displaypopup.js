@@ -1,4 +1,5 @@
 import getComments from './getComments.js';
+import addComment from './addComments.js';
 
 const popup = document.querySelector('.popup-window');
 
@@ -62,10 +63,33 @@ const displayDetails = async (data) => {
       </tr>
   `;
   });
-
   commentsDiv.appendChild(ulComments);
-  divCont.append(lowerdiv, commentsDiv);
+
+  //form
+  const formDiv = document.createElement('div');
+  formDiv.className = 'formDiv';
+  const form = document.createElement('form');
+  form.className = 'com-form';
+  form.innerHTML += `<h2>Add a comment</h2>
+  <input type="text" name="username" placeholder="Your name" required> 
+  <textarea placeholder="Your insights" name="comment" required minlength="1"></textarea>
+  <button type="submit">Submit</button>`;
+  formDiv.appendChild(form);
+  divCont.append(lowerdiv, commentsDiv, formDiv);
   popup.append(divCont);
+
+  const form1 = popup.querySelector('.com-form');
+    form1.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = form.elements.username.value;
+      const message = form.elements.comment.value;
+      addComment({
+        username: user,
+        comment: message,
+      })
+        form1.reset();
+    });
 };
+
 
 export default displayDetails;
