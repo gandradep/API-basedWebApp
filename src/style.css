@@ -48,6 +48,10 @@ div.logo {
   display: flex;
 }
 
+i {
+  color: #f77;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -67,7 +71,7 @@ a {
 .homeDivPokemon {
   flex-direction: column;
   row-gap: 15px;
-  width: 220px;
+  width: 225px;
 }
 
 .divNameLikes {
