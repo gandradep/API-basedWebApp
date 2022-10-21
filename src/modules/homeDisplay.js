@@ -1,5 +1,8 @@
+import homeCounter from './homeElementsCounter.js';
+
 const display = (data) => {
   const mainContainer = document.getElementById('main');
+  const counter = document.getElementById('counter');
 
   mainContainer.innerText = '';
   data.forEach((item) => {
@@ -33,5 +36,6 @@ const display = (data) => {
     div.append(myImg, divNameLikes, comment);
     mainContainer.appendChild(div);
   });
+  counter.innerText = `total elements: ${homeCounter(mainContainer)}`;
 };
 export default display;
