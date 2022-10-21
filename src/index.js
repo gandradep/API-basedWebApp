@@ -13,7 +13,7 @@ const mainContainer = document.getElementById('main');
 const popContainer = document.querySelector('.popup-window');
 const likeArr = [];
 
-buildObj(likeArr).then( (json) => display(json));
+buildObj(likeArr).then((json) => display(json));
 popContainer.addEventListener('click', async (e) => {
   if (e.target.classList.contains('submit')) {
     e.preventDefault();
