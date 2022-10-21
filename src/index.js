@@ -11,11 +11,9 @@ import postLike from './modules/postLike.js';
 
 const mainContainer = document.getElementById('main');
 const popContainer = document.querySelector('.popup-window');
-const counter = document.getElementById('counter');
 const likeArr = [];
 
 buildObj(likeArr).then( (json) => display(json));
-
 popContainer.addEventListener('click', async (e) => {
   if (e.target.classList.contains('submit')) {
     e.preventDefault();

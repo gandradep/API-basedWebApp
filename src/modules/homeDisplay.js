@@ -1,4 +1,5 @@
 import homeCounter from './homeElementsCounter.js';
+
 const display = (data) => {
   const mainContainer = document.getElementById('main');
   const counter = document.getElementById('counter');
