@@ -24,9 +24,8 @@ popContainer.addEventListener('click', async (e) => {
     await addComment(user, message);
     form.reset();
     getPokemonDetails().then((json) => displayDetails(json));
-
-
-
+  }
+});
 
 mainContainer.addEventListener('click', async (e) => {
   if (e.target.classList.contains('fa-heart')) {
