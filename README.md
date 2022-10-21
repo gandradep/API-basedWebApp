@@ -1,6 +1,7 @@
 ## API-basedWebApp
 
 **This is an API-based Web App**
+- This is app shows 20 Pokemon characters that are fetch from the [Pokeapi](https://pokeapi.co/).
 
 ## Built With
 
@@ -12,7 +13,7 @@
 
 ## Live Demo
 
-- [Live Demo Link]().
+- [Live Demo Link](https://gandradep.github.io/API-basedWebApp/).
 
 ## Getting Started
 
@@ -24,21 +25,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 - clone 'https://github.com/gandradep/API-basedWebApp.git'
-- Setup Linters by running following commands in your terminal:
 
-- npm install --save-dev stylelint@13.x stylelint-scss@3.x - - - stylelint-config-standard@21.x stylelint-csstree-validator@1.x (Install the StyleHint linters)
+- `npm install` to install all the project dependencies.
 
-- npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
-
-- npx stylelint "*/.{css,scss}" (checks for the CSS related errors in your project)
-
-- npx stylelint "*/.{css,scss}" --fix (This will fix the linters error, if any)
-
-- npm install --save-dev hint@7.x (Install the WebHint Linters)
-
-- Run npx eslint . on the root of your directory of your project.
-
-- npx hint . (You should see Finishing... on your terminal)
+- run the project from your command line typing `npm start`
 
 ## Author 1
 👤 **Gabriel Andrade**
@@ -69,6 +59,9 @@ Give a ⭐️ if you like this project.
 
 - Microverse
 - [Pokeball image](https://commons.wikimedia.org/wiki/Category:Pok%C3%A9_Balls)
+- [fontAwesome](https://fontawesome.com/icons)
+- [Pokemon images](https://www.pokemon.com/us/pokedex/)
+
 
 ## 📝 License
 
