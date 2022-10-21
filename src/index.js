@@ -3,6 +3,7 @@ import './popup.css';
 import getPokemonDetails from './modules/popupwindow.js';
 import displayDetails from './modules/displaypopup.js';
 import addComment from './modules/addComments.js';
+
 import { buildObj } from './modules/homeObjPokemon.js';
 
 import display from './modules/homeDisplay.js';
@@ -10,9 +11,10 @@ import postLike from './modules/postLike.js';
 
 const mainContainer = document.getElementById('main');
 const popContainer = document.querySelector('.popup-window');
+const counter = document.getElementById('counter');
 const likeArr = [];
 
-buildObj(likeArr).then((json) => display(json));
+buildObj(likeArr).then( (json) => display(json));
 
 popContainer.addEventListener('click', async (e) => {
   if (e.target.classList.contains('submit')) {
