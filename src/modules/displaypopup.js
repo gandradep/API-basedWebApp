@@ -77,8 +77,9 @@ const displayDetails = async (data) => {
   formDiv.appendChild(form);
   divCont.append(lowerdiv, commentsDiv, formDiv);
   popup.append(divCont);
+};
 
-  const form1 = popup.querySelector('.com-form');
+const form1 = popup.querySelector('.com-form');
     form1.addEventListener('submit', (e) => {
       e.preventDefault();
       const user = form.elements.username.value;
@@ -88,8 +89,8 @@ const displayDetails = async (data) => {
         comment: message,
       })
         form1.reset();
+        displayDetails();
     });
-};
 
 
 export default displayDetails;
