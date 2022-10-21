@@ -1,7 +1,9 @@
 ## API-basedWebApp
 
 **This is an API-based Web App**
-- This is app shows 20 Pokemon characters that are fetch from the [Pokeapi](https://pokeapi.co/).
+> This app shows 20 Pokemon characters that are fetch from the [Pokeapi](https://pokeapi.co/).
+> You can interact with each one, giving them a like or adding a comment.  
+> The moment you press the comment button, a pop-up window will show up with more details about the Pokemon and will also show the comments left for it.
 
 ## Built With
 
