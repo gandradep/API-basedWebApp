@@ -55,16 +55,25 @@ const displayDetails = async (data) => {
     // console.log(item);
     ulComments.className = 'divComments';
     ulComments.innerHTML += `
-   <tr>
-        <td>${item.creation_date}</td>
-        <td>${item.username}</td>
-        <td>${item.comment}</td>
-      </tr>
-  `;
+    <tr>
+    <td>${item.creation_date}</td>
+    <td>${item.username}</td>
+    <td>${item.comment}</td>
+    </tr>
+    `;
   });
-
   commentsDiv.appendChild(ulComments);
-  divCont.append(lowerdiv, commentsDiv);
+  // form
+  const formDiv = document.createElement('div');
+  formDiv.className = 'formDiv';
+  const form = document.createElement('form');
+  form.className = 'com-form';
+  form.innerHTML += `<h2>Add a comment</h2>
+  <input type="text" name="username" placeholder="Your name" required>
+  <textarea placeholder="Your insights" name="comment" required minlength="1"></textarea>
+  <button type="submit" class="submit">Submit</button>`;
+  formDiv.appendChild(form);
+  divCont.append(lowerdiv, commentsDiv, formDiv);
   popup.append(divCont);
 };
 
