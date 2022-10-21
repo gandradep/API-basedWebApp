@@ -4,10 +4,10 @@ const popup = document.querySelector('.popup-window');
 
 const displayDetails = async (data, id) => {
   let jump = true;
-  let commentArr = await getComments(id);
-  if(commentArr.error) {
+  const commentArr = await getComments(id);
+  if (commentArr.error) {
     jump = false;
-  };
+  }
   const divCont = document.createElement('div');
   divCont.setAttribute('id', id);
   divCont.className = 'divCont';
@@ -55,23 +55,23 @@ const displayDetails = async (data, id) => {
 
   const commentsDiv = document.createElement('div');
   if (jump) {
-  commentsDiv.className = 'commentsDiv';
-  commentsDiv.innerHTML += '<span class="comments">Comments</span>';
-  const ulComments = document.createElement('table');
-  ulComments.innerHTML += '<tr><th>Creation Date</th><th>UserName</th><th>Comment</th></tr>';
-  commentArr.forEach((item) => {
+    commentsDiv.className = 'commentsDiv';
+    commentsDiv.innerHTML += '<span class="comments">Comments</span>';
+    const ulComments = document.createElement('table');
+    ulComments.innerHTML += '<tr><th>Creation Date</th><th>UserName</th><th>Comment</th></tr>';
+    commentArr.forEach((item) => {
     // console.log(item);
-    ulComments.className = 'divComments';
-    ulComments.innerHTML += `
+      ulComments.className = 'divComments';
+      ulComments.innerHTML += `
     <tr>
     <td>${item.creation_date}</td>
     <td>${item.username}</td>
     <td>${item.comment}</td>
     </tr>
     `;
-  });
-  commentsDiv.appendChild(ulComments);
-}
+    });
+    commentsDiv.appendChild(ulComments);
+  }
   // form
   const formDiv = document.createElement('div');
   formDiv.className = 'formDiv';

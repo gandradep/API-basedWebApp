@@ -14,7 +14,6 @@ const likeArr = [];
 
 buildObj(likeArr).then((json) => display(json));
 
-
 popContainer.addEventListener('click', async (e) => {
   if (e.target.classList.contains('submit')) {
     e.preventDefault();

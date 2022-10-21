@@ -3,7 +3,6 @@ const getComments = (id) => fetch(`https://us-central1-involvement-api.cloudfunc
   .then(async (json) => {
     const resPromise = await json;
     return resPromise;
-  })
-
+  });
 
 export default getComments;
