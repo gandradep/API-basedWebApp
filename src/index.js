@@ -13,17 +13,21 @@ const popContainer = document.querySelector('.popup-window');
 const likeArr = [];
 
 buildObj(likeArr).then((json) => display(json));
-getPokemonDetails().then((json) => displayDetails(json));
 
 popContainer.addEventListener('click', async (e) => {
   if (e.target.classList.contains('submit')) {
     e.preventDefault();
     const form = e.target.closest('form');
+    const idPop = form.closest('div.divCont').id;
     const user = form.elements.username.value;
     const message = form.elements.comment.value;
-    await addComment(user, message);
+    await addComment(user, message, idPop);
     form.reset();
-    getPokemonDetails().then((json) => displayDetails(json));
+    getPokemonDetails(idPop).then((json) => displayDetails(json, idPop));
+  }
+  if (e.target.classList.contains('close-popup')) {
+    popContainer.classList.toggle('dNone');
+    popContainer.innerText = '';
   }
 });
 
@@ -36,5 +40,10 @@ mainContainer.addEventListener('click', async (e) => {
       await postLike(idClick);
       buildObj(likeArr).then((json) => display(json));
     }
+  }
+  if (e.target.classList.contains('comButton')) {
+    const idParent = e.target.closest('div.homeDivPokemon').id;
+    popContainer.classList.toggle('dNone');
+    getPokemonDetails(idParent).then((json) => displayDetails(json, idParent));
   }
 });
