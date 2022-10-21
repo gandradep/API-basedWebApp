@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 import homeCounter from './homeElementsCounter.js';
+
 describe('homeCounter function', () => {
   test('testing  2 home elements', () => {
     const div = document.createElement('div');
