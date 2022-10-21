@@ -15,7 +15,8 @@
 
 ## Live Demo
 
-- [Live Demo Link](https://gandradep.github.io/API-basedWebApp/).
+- Visit the [app](https://gandradep.github.io/API-basedWebApp/) on the browser.
+- Watch a [demo]() of how it works.
 
 ## Getting Started
 
