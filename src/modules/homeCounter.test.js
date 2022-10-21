@@ -1,12 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-
-
 import homeCounter from './homeElementsCounter.js';
-
 describe('homeCounter function', () => {
-
   test('testing  2 home elements', () => {
     const div = document.createElement('div');
     const span = document.createElement('span');
@@ -14,7 +10,6 @@ describe('homeCounter function', () => {
     div.append(span, span2);
     expect(homeCounter(div)).toBe(2);
   });
-
   test('testing 0 home elements', () => {
     const div = document.createElement('div');
     expect(homeCounter(div)).toBe(0);
@@ -29,14 +24,4 @@ describe('homeCounter function', () => {
     });
     expect(homeCounter(div)).toBe(13);
   });
-
 });
-
-
-// const homeCounter = (element) => {
-//   const number = element.children.length;
-//
-//   return number;
-// };
-//
-// export default homeCounter;
