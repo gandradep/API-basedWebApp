@@ -1,6 +1,5 @@
 const display = (data) => {
   const mainContainer = document.getElementById('main');
-  let count = 1;
 
   mainContainer.innerText = '';
   data.forEach((item) => {
@@ -15,7 +14,6 @@ const display = (data) => {
     div.classList.add('dFlex', 'homeDivPokemon');
     div.setAttribute('id', item.id);
     divNameLikes.classList.add('dFlex', 'divNameLikes');
-    /* url image link */
     myImg.src = item.imgSrc;
     myImg.classList.add('homeImg');
 
@@ -33,9 +31,7 @@ const display = (data) => {
     comment.classList.add('rem15');
     divNameLikes.append(name, likes);
     div.append(myImg, divNameLikes, comment);
-
     mainContainer.appendChild(div);
-    count += 1;
   });
 };
 export default display;
