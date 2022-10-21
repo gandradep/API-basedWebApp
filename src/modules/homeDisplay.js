@@ -1,12 +1,9 @@
-/* eslint-disable import/prefer-default-export */
-export const display = (data, heart) => {
+const display = (data) => {
   const mainContainer = document.getElementById('main');
   let count = 1;
-  let indexImg;
 
   mainContainer.innerText = '';
   data.forEach((item) => {
-
     const div = document.createElement('div');
     const myImg = new Image();
     const divNameLikes = document.createElement('div');
@@ -19,11 +16,10 @@ export const display = (data, heart) => {
     div.setAttribute('id', item.id);
     divNameLikes.classList.add('dFlex', 'divNameLikes');
     /* url image link */
-    indexImg = count.toString().padStart(3, '0');
     myImg.src = item.imgSrc;
     myImg.classList.add('homeImg');
 
-    if(item.clicked) {
+    if (item.clicked) {
       heartIcon.classList.add('fa-solid', 'fa-heart', 'rem15');
     } else {
       heartIcon.classList.add('fa-regular', 'fa-heart', 'rem15');
@@ -42,3 +38,4 @@ export const display = (data, heart) => {
     count += 1;
   });
 };
+export default display;

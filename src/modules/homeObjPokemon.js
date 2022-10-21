@@ -19,8 +19,8 @@ export const buildObj = async (likeArr) => {
       clicked: false,
       ...item,
     };
-    let countStr = count.toString();
-    if(likeArr.includes(countStr)){
+    const countStr = count.toString();
+    if (likeArr.includes(countStr)) {
       responseObj.clicked = true;
     }
     const value = resultLikes.find((obj) => Number(obj.item_id) === responseObj.id);
@@ -29,6 +29,6 @@ export const buildObj = async (likeArr) => {
     }
     newObjArr.push(responseObj);
     count += 1;
-  });  
+  });
   return newObjArr;
 };
