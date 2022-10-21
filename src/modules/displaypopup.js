@@ -9,6 +9,7 @@ const displayDetails = async (data, id) => {
     jump = false;
   };
   const divCont = document.createElement('div');
+  divCont.setAttribute('id', id);
   divCont.className = 'divCont';
   const indexImg = id.toString().padStart(3, '0');
   const img = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${indexImg}.png`;
@@ -23,7 +24,7 @@ const displayDetails = async (data, id) => {
 
   const div4 = document.createElement('div');
   div4.className = 'popcontainer1';
-  div4.innerHTML += `<p class="size">Height: ${data.height} m</p>`;
+  div4.innerHTML += `<p class="size">Height: ${data.height} cm</p>`;
   popup.appendChild(div4);
   div4.innerHTML += `<p class="size">Weight: ${data.weight / 10} kgs</p>`;
   divCont.appendChild(div4);

@@ -1,8 +1,8 @@
-const addComment = (user, message) => fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/GZc42DTMDGJQZqgfZyNX/comments',
+const addComment = (user, message, id) => fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/GZc42DTMDGJQZqgfZyNX/comments',
   {
     method: 'POST',
     body: JSON.stringify({
-      item_id: '2',
+      item_id: id,
       username: user,
       comment: message,
     }),

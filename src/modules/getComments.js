@@ -2,7 +2,6 @@ const getComments = (id) => fetch(`https://us-central1-involvement-api.cloudfunc
   .then((response) => response.json())
   .then(async (json) => {
     const resPromise = await json;
-
     return resPromise;
   })
 
