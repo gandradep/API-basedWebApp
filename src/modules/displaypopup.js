@@ -2,7 +2,6 @@ import getComments from './getComments.js';
 import commentsCounter from './coomentsCounter.js';
 
 const popup = document.querySelector('.popup-window');
-
 const displayDetails = async (data, id) => {
   let jump = true;
   const commentArr = await getComments(id);
@@ -22,7 +21,6 @@ const displayDetails = async (data, id) => {
   div3.innerHTML += `<p class="name">${data.name.toUpperCase()}</p>`;
   divCont.appendChild(div3);
   popup.appendChild(divCont);
-
   const div4 = document.createElement('div');
   div4.className = 'popcontainer1';
   div4.innerHTML += `<p class="size">Height: ${data.height} cm</p>`;
@@ -30,7 +28,6 @@ const displayDetails = async (data, id) => {
   div4.innerHTML += `<p class="size">Weight: ${data.weight / 10} kgs</p>`;
   divCont.appendChild(div4);
   popup.appendChild(divCont);
-
   const lowerdiv = document.createElement('div');
   lowerdiv.className = 'lowerdiv';
   const div2 = document.createElement('div');
@@ -42,7 +39,6 @@ const displayDetails = async (data, id) => {
     div2.appendChild(div);
     lowerdiv.appendChild(div2);
   });
-
   const div1 = document.createElement('div');
   div1.className = 'popcontainer3';
   div1.innerHTML += '<h2>Types</h2>';
@@ -53,12 +49,12 @@ const displayDetails = async (data, id) => {
     lowerdiv.appendChild(div1);
   });
   /* creating comments */
-
   const commentsDiv = document.createElement('div');
+  const numberShow = document.createElement('span');
+  const ulComments = document.createElement('table');
   if (jump) {
     commentsDiv.className = 'commentsDiv';
     commentsDiv.innerHTML += '<span class="comments">Comments</span>';
-    const ulComments = document.createElement('table');
     ulComments.innerHTML += '<tr><th>Creation Date</th><th>UserName</th><th>Comment</th></tr>';
     commentArr.forEach((item) => {
       ulComments.className = 'divComments';
@@ -70,11 +66,9 @@ const displayDetails = async (data, id) => {
     </tr>
     `;
     });
-    commentsDiv.appendChild(ulComments);
-    //const x = commentsCounter(commentArr); 
-    //console.log(x);
   }
-  
+  numberShow.innerText = ` (${commentsCounter(ulComments)})`;
+  commentsDiv.append(numberShow, ulComments);
   // form
   const formDiv = document.createElement('div');
   formDiv.className = 'formDiv';
@@ -88,5 +82,4 @@ const displayDetails = async (data, id) => {
   divCont.append(lowerdiv, commentsDiv, formDiv);
   popup.append(divCont);
 };
-
 export default displayDetails;
