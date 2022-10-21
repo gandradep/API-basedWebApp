@@ -1,6 +1,5 @@
 import getComments from './getComments.js';
 
-
 const popup = document.querySelector('.popup-window');
 
 const displayDetails = async (data) => {
@@ -64,7 +63,7 @@ const displayDetails = async (data) => {
     `;
   });
   commentsDiv.appendChild(ulComments);
-  //form
+  // form
   const formDiv = document.createElement('div');
   formDiv.className = 'formDiv';
   const form = document.createElement('form');
@@ -77,8 +76,5 @@ const displayDetails = async (data) => {
   divCont.append(lowerdiv, commentsDiv, formDiv);
   popup.append(divCont);
 };
-
-
-
 
 export default displayDetails;

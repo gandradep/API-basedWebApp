@@ -6,15 +6,12 @@ import addComment from './modules/addComments.js';
 import { buildObj } from './modules/homeObjPokemon.js';
 
 import { display } from './modules/homeDisplay.js';
-const popContainer = document.querySelector('.popup-window')
+
+const popContainer = document.querySelector('.popup-window');
 buildObj().then((json) => display(json));
-getPokemonDetails().then(async (json) => await displayDetails(json));
-
-
-
+getPokemonDetails().then((json) => displayDetails(json));
 
 popContainer.addEventListener('click', async (e) => {
-
   if (e.target.classList.contains('submit')) {
     e.preventDefault();
     const form = e.target.closest('form');
@@ -23,12 +20,5 @@ popContainer.addEventListener('click', async (e) => {
     await addComment(user, message);
     form.reset();
     getPokemonDetails().then((json) => displayDetails(json));
-
-    console.log(message);
   }
-
-
-
-
-
 });
