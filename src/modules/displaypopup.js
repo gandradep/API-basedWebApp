@@ -2,13 +2,18 @@ import getComments from './getComments.js';
 
 const popup = document.querySelector('.popup-window');
 
-const displayDetails = async (data) => {
-  const commentArr = await getComments();
+const displayDetails = async (data, id) => {
+  let jump = true;
+  let commentArr = await getComments(id);
+  if(commentArr.error) {
+    jump = false;
+  };
   const divCont = document.createElement('div');
   divCont.className = 'divCont';
-  const img = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png';
+  const indexImg = id.toString().padStart(3, '0');
+  const img = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${indexImg}.png`;
   popup.innerText = '';
-  divCont.innerHTML += '<span id="close-popup">X</span>';
+  divCont.innerHTML += '<span class="close-popup">X</span>';
   const div3 = document.createElement('div');
   div3.className = 'popcontainer';
   div3.innerHTML += `<img class="img" src="${img}">`;
@@ -46,7 +51,9 @@ const displayDetails = async (data) => {
     lowerdiv.appendChild(div1);
   });
   /* creating comments */
+
   const commentsDiv = document.createElement('div');
+  if (jump) {
   commentsDiv.className = 'commentsDiv';
   commentsDiv.innerHTML += '<span class="comments">Comments</span>';
   const ulComments = document.createElement('table');
@@ -63,6 +70,7 @@ const displayDetails = async (data) => {
     `;
   });
   commentsDiv.appendChild(ulComments);
+}
   // form
   const formDiv = document.createElement('div');
   formDiv.className = 'formDiv';

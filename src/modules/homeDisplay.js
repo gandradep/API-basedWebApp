@@ -28,7 +28,7 @@ const display = (data) => {
     name.innerText = item.name.toUpperCase();
     name.classList.add('rem15', 'fw500');
     comment.innerText = 'Comments';
-    comment.classList.add('rem15');
+    comment.classList.add('rem15', 'comButton');
     divNameLikes.append(name, likes);
     div.append(myImg, divNameLikes, comment);
     mainContainer.appendChild(div);
