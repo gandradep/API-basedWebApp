@@ -1,4 +1,5 @@
 import getComments from './getComments.js';
+import commentsCounter from './coomentsCounter.js';
 
 const popup = document.querySelector('.popup-window');
 
@@ -60,7 +61,6 @@ const displayDetails = async (data, id) => {
     const ulComments = document.createElement('table');
     ulComments.innerHTML += '<tr><th>Creation Date</th><th>UserName</th><th>Comment</th></tr>';
     commentArr.forEach((item) => {
-    // console.log(item);
       ulComments.className = 'divComments';
       ulComments.innerHTML += `
     <tr>
@@ -71,7 +71,10 @@ const displayDetails = async (data, id) => {
     `;
     });
     commentsDiv.appendChild(ulComments);
+    //const x = commentsCounter(commentArr); 
+    //console.log(x);
   }
+  
   // form
   const formDiv = document.createElement('div');
   formDiv.className = 'formDiv';
