@@ -34,7 +34,7 @@ mainContainer.addEventListener('click', async (e) => {
     if (!likeArr.includes(idClick)) {
       likeArr.push(idClick);
       await postLike(idClick);
-      buildObj(likeArr).then((json) => display(json));    
+      buildObj(likeArr).then((json) => display(json));
     }
   }
 });
