@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hind', sans-serif;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.rem2 {
+  font-size: 2rem;
+}
+
+.rem15 {
+  font-size: 1.5rem;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.nav-bar {
+  background: black;
+  align-items: center;
+  color: #fff;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div.logo {
+  background: url('./pokeball.png');
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+
+.ul-links {
+  list-style: none;
+  display: flex;
+}
+
+i {
+  color: #f77;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#main {
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  row-gap: 60px;
+  column-gap: 60px;
+}
+
+.homeDivPokemon {
+  flex-direction: column;
+  row-gap: 15px;
+  width: 225px;
+}
+
+.divNameLikes {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likes {
+  background-color: white;
+  border: none;
+}
+
+.homeImg {
+  width: 220px;
+  background-color: #eee;
+  border-radius: 5px;
+}
