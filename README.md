@@ -36,9 +36,10 @@ To get a local copy up and running follow these simple example steps.
 ## Author 1
 👤 **Gabriel Andrade**
 
-- GitHub: [@githubhandle]()
-- Twitter: [@twitterhandle]()
-- Linkedin: [@linkedinhandle]()
+- GitHub: [@gandradep](https://github.com/gandradep)
+- Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
+- LinkedIn: [Gabriel-Andrade](https://www.linkedin.com/in/gabriel-andrade-silla-turca/)
+
 
 ## Author 2
 
